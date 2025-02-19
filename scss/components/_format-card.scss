@@ -12,11 +12,6 @@
     rgba(49, 38, 26, 0.71) 72.92%,
     #31261a 100%
   );
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
 
   &__image {
     position: absolute;

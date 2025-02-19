@@ -31,47 +31,59 @@
 
   &__container {
     display: flex;
+    flex-direction: column;
     gap: 20px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
   }
 
   &__nav,
   &__address {
-    flex-basis: 50%;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     gap: 20px;
+
+    @media screen and (min-width: $bp-tablet) {
+      text-align: left;
+      flex-direction: row;
+      flex-basis: 50%;
+    }
   }
 
   &__logo,
   &__menu {
     flex-grow: 1;
   }
-}
 
-.address-list,
-.address-info {
-  flex-grow: 1;
-}
-
-.address-link {
-  color: var(--color-primary-light);
-  font-size: 16px;
-  font-weight: 300;
-  text-decoration: none;
-
-  &:hover {
-    color: var(--color-brand-normal);
+  &__address-list,
+  &__address-info {
+    flex-grow: 1;
   }
-}
 
-.adress-icon {
-  fill: var(--color-primary-light);
+  &__address-link {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
 
-  &:hover {
-    fill: var(--color-brand-normal);
+    &:hover {
+      color: var(--color-brand-normal);
+    }
   }
-}
 
-.address-copyright {
-  font-size: 14px;
-  color: #a18268;
+  &__adress-icon {
+    fill: var(--color-primary-light);
+
+    &:hover {
+      fill: var(--color-brand-normal);
+    }
+  }
+
+  &__address-copyright {
+    font-size: 14px;
+    color: #a18268;
+  }
 }
